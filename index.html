@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster | Placement Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <!-- HOME SCREEN -->
+    <section id="homeScreen" class="screen active">
+
+        <div class="home-card">
+
+            <div class="logo">
+                <span>Q</span>
+            </div>
+
+            <p class="tag">PLACEMENT PREPARATION</p>
+
+            <h1>Quiz<span>Master</span></h1>
+
+            <p class="subtitle">
+                Test your knowledge in Programming, Web Development,
+                DBMS, DSA and Computer Science.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <strong>10</strong>
+                    <small>Questions</small>
+                </div>
+
+                <div>
+                    <strong>15s</strong>
+                    <small>Per Question</small>
+                </div>
+
+                <div>
+                    <strong>100</strong>
+                    <small>Max Score</small>
+                </div>
+            </div>
+
+            <button id="startBtn" class="primary-btn">
+                Start Quiz
+                <span>→</span>
+            </button>
+
+            <p class="high-score">
+                High Score:
+                <strong id="homeHighScore">0</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ SCREEN -->
+    <section id="quizScreen" class="screen">
+
+        <div class="quiz-container">
+
+            <header class="quiz-header">
+
+                <div class="brand">
+                    <div class="mini-logo">Q</div>
+                    <span>QuizMaster</span>
+                </div>
+
+                <div class="score-box">
+                    Score:
+                    <strong id="score">0</strong>
+                </div>
+
+            </header>
+
+
+            <div class="progress-section">
+
+                <div class="progress-info">
+                    <span>
+                        Question <strong id="currentQuestion">1</strong>
+                        of <strong id="totalQuestions">10</strong>
+                    </span>
+
+                    <span id="category">JavaScript</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <div class="timer-container">
+
+                <div class="timer-icon">⏱</div>
+
+                <div class="timer">
+                    <span id="timer">15</span>
+                    <small>SEC</small>
+                </div>
+
+            </div>
+
+
+            <main class="question-card">
+
+                <p id="questionNumber">QUESTION 01</p>
+
+                <h2 id="question">
+                    Question goes here
+                </h2>
+
+                <div id="options" class="options"></div>
+
+                <div id="feedback" class="feedback"></div>
+
+                <button id="nextBtn" class="next-btn">
+                    Next Question →
+                </button>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="screen">
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <p class="tag">QUIZ COMPLETED</p>
+
+            <h1>Your Result</h1>
+
+            <div class="score-circle">
+                <div>
+                    <strong id="finalScore">0</strong>
+                    <span>/ 100</span>
+                </div>
+            </div>
+
+            <h2 id="resultMessage">Great Job!</h2>
+
+            <p id="resultDescription"></p>
+
+            <div class="result-stats">
+
+                <div>
+                    <strong id="correctAnswers">0</strong>
+                    <span>Correct</span>
+                </div>
+
+                <div>
+                    <strong id="wrongAnswers">0</strong>
+                    <span>Wrong</span>
+                </div>
+
+                <div>
+                    <strong id="percentage">0%</strong>
+                    <span>Accuracy</span>
+                </div>
+
+            </div>
+
+            <div class="result-buttons">
+
+                <button id="restartBtn" class="primary-btn">
+                    Play Again ↻
+                </button>
+
+                <button id="homeBtn" class="secondary-btn">
+                    Back to Home
+                </button>
+
+            </div>
+
+            <p class="best-score">
+                Best Score:
+                <strong id="resultHighScore">0</strong>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
